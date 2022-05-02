@@ -18,13 +18,11 @@
   "private": true,
   "workspaces": [
     "ds-storybook",
-    "ds-style-dictionary",
-    "ds-frontend-app"
+    "ds-style-dictionary"
   ],
   "scripts": {
     "build:storybook": "yarn workspace ds-storybook storybook:build",
     "build:tokens": "yarn workspace ds-style-dictionary build:export",
-    "run:storybook": "yarn workspace ds-storybook storybook",
-    "run:frontend": "yarn workspace ds-frontend-app dev"
+    "run:storybook": "yarn workspace ds-storybook storybook"
   }
 }

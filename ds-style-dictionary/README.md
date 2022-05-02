@@ -35,7 +35,7 @@ I `build.js` filen kan vi registrere en *transform* som skal kjøres på en toke
 
 ```js
 StyleDictionary.registerTransform({
-  name: "ds-boxShadow",
+  name: "ds/boxShadow",
   type: "value",
   transitive: false,
   matcher: isBoxShadow,

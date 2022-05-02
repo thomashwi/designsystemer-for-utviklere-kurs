@@ -8,7 +8,10 @@
         "time/seconds",
         "content/icon",
         "size/rem",
-        "color/css"
+        "color/css",
+        "ds/boxShadow",
+        "ds/sizeToPx",
+        "ds/typography"
       ],
       "buildPath": "build/web/stylesheet/",
       "files": [{
@@ -40,7 +43,10 @@
         "time/seconds",
         "content/icon",
         "size/rem",
-        "color/css"
+        "color/css",
+        "ds/boxShadow",
+        "ds/sizeToPx",
+        "ds/typography"
       ],
       "buildPath": "build/web/code/",
       "files": [{

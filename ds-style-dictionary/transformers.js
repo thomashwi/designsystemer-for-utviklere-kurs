@@ -1,11 +1,11 @@
 /**
- * Transformerer verdien fra "boxShadow" fra Figma Tokens til css verdi.
+ * Transformerer verdien fra "boxShadow" fra Figma Tokens til `
  * @param token Et token med type "boxShadow" fra våre design-tokens.
  * @returns En ferdig streng til bruk med css-property "box-shadow".
  */
-function transformBoxShadow(token) {
-    // TODO: Skriv en box shadow transformer.
-  return;
+ function transformBoxShadow(token) {
+  const { x, y, blur, spread, color } = token.value;
+  return `${x}px ${y}px ${blur}px ${spread}px ${color}`;
 };
 
 /**
@@ -14,8 +14,8 @@ function transformBoxShadow(token) {
  * @returns Tokenets verdi med pixel bak. 
  */
 function transformSizeToPx(token) {
-  // TODO: Skriv en size transformer.
-  return;
+  const { value } = token;
+  return `${value}px`;
 }
 
 /**
@@ -24,8 +24,8 @@ function transformSizeToPx(token) {
  * @returns Tokenet konvertert til en verdi for bruk med font-shorthand.
  */
 function transformTypographyToFont(token) {
-  // TODO: Skriv en typography transformer.
-  return;
+  const { fontFamily, fontWeight, lineHeight, fontSize } = token.original.value;
+  return `normal normal ${fontWeight} ${fontSize}/${lineHeight} ${fontFamily}`;
 }
 
 module.exports = {

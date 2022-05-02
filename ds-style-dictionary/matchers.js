@@ -3,9 +3,8 @@
  * @param {*} token 
  * @returns true eller false.
  */
-function isBoxShadow(token) {
-  // TODO: Skriv en box shadow matcher.
-  return;
+ function isBoxShadow(token) {
+  return token.type === "boxShadow";
 };
 
 /**
@@ -14,8 +13,11 @@ function isBoxShadow(token) {
  * @returns true eller false.
  */
 function isSize(token) {
-  // TODO: Skriv en size/px matcher.
-  return;
+  return token.type === "fontSizes"
+  || token.type === "fontSize"
+  || token.type === "dimension"
+  || token.type === "borderRadius"
+  || token.type === "spacing";
 }
 
 /**
@@ -24,8 +26,7 @@ function isSize(token) {
  * @returns true eller false.
  */
 function isTypography(token) {
-    // TODO: Skriv en typography matcher.
-    return;
+    return token.type === "typography";
 }
 
 module.exports = {
