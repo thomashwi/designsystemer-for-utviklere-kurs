@@ -1,0 +1,30 @@
+{
+  "name": "designsystem-course",
+  "version": "0.0.1",
+  "description": "Repo for kurs - Designsystemer for utviklere.",
+  "main": "index.js",
+  "repository": "git@github.com:/sopra-steria-norge/designsystemer-for-utviklere-kurs.git",
+  "contributors": [
+    {
+      "name" : "Adrian Sandaker",
+      "email" : "adrian.sandaker@soprasteria.com"
+    },
+    {
+      "name" : "Thomas Wiberg",
+      "email" : "thomas.wiberg@soprasteria.com"
+    }
+  ],
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "ds-storybook",
+    "ds-style-dictionary",
+    "ds-frontend-app"
+  ],
+  "scripts": {
+    "build:storybook": "yarn workspace ds-storybook storybook:build",
+    "build:tokens": "yarn workspace ds-style-dictionary build:export",
+    "run:storybook": "yarn workspace ds-storybook storybook",
+    "run:frontend": "yarn workspace ds-frontend-app dev"
+  }
+}

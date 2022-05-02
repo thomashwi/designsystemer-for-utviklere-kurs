@@ -1,0 +1,51 @@
+{
+  "name": "ds-storybook",
+  "version": "0.1.0",
+  "private": true,
+  "contributors": [
+    {
+      "name" : "Adrian Sandaker",
+      "email" : "adrian.sandaker@soprasteria.com"
+    },
+    {
+      "name" : "Thomas Wiberg",
+      "email" : "thomas.wiberg@soprasteria.com"
+    }
+  ],
+  "scripts": {
+    "start": "storybook",
+    "storybook": "start-storybook --quiet --port 6006 --static-dir public",
+    "storybook:build": "build-storybook -s public"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.3",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-docs": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/builder-webpack5": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/node-logger": "^6.4.19",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "css-loader": "^6.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.5.5",
+    "webpack": "^5.69.1"
+  }
+}

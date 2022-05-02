@@ -1,0 +1,13 @@
+# mono
+node_modules
+
+# ds-storybook
+ds-storybook/node_modules
+ds-storybook/build
+
+
+# style-dictionary
+ds-style-dictionary-example/node_modules/
+ds-style-dictionary-example/build
+
+yarn-error.log

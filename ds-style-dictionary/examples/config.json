@@ -1,0 +1,63 @@
+{
+    "source": ["examples/tokens/**/*.json"],
+    "platforms": {
+      "web.stylesheet": {
+        "transforms": [
+          "attribute/cti",
+          "name/cti/kebab",
+          "time/seconds",
+          "content/icon",
+          "size/rem",
+          "color/css"
+        ],
+        "buildPath": "examples/build/web/stylesheet/",
+        "files": [{
+          "destination": "_variables.css",
+          "format": "css/variables",
+          "options": {
+            "outputReferences": true
+          }
+        },
+        {
+          "destination": "_variables.scss",
+          "format": "scss/variables",
+          "options": {
+            "outputReferences": true
+          }
+        },
+        {
+          "destination": "_variables.less",
+          "format": "less/variables",
+          "options": {
+            "outputReferences": true
+          }
+        }]
+      },
+      "web.code": {
+        "transforms": [
+          "attribute/cti",
+          "name/cti/camel",
+          "time/seconds",
+          "content/icon",
+          "size/rem",
+          "color/css"
+        ],
+        "buildPath": "./examples/build/web/code/",
+        "files": [{
+          "destination": "_variables.js",
+          "format": "javascript/es6",
+          "options": {
+            "outputReferences": true
+          }
+        },
+        {
+          "destination": "_variables.d.ts",
+          "format": "typescript/es6-declarations",
+          "options": {
+            "outputReferences": true
+          }
+        }]
+      }
+    }
+  }
+  
