@@ -1,0 +1,30 @@
+{
+  "name": "ds-style-dictionary",
+  "private": true,
+  "version": "0.1.0",
+  "description": "An example setup of style-dictionary for a design system.",
+  "scripts": {
+    "transform": "token-transformer ../ds-figma-tokens/tokens.json tokens.json",
+    "build": "yarn transform && node ./build.js",
+    "build:export": "yarn run build && shx cp -r ./build/web/stylesheet/_variables.scss ../ds-storybook/src",
+    "build:examples": "style-dictionary build --config ./examples/config.json"
+  },
+  "contributors": [
+    {
+      "name" : "Adrian Sandaker",
+      "email" : "adrian.sandaker@soprasteria.com"
+    },
+    {
+      "name" : "Thomas Wiberg",
+      "email" : "thomas.wiberg@soprasteria.com"
+    }
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "style-dictionary": "^3.7.0",
+    "token-transformer": "^0.0.20"
+  },
+  "devDependencies": {
+    "shx": "^0.3.4"
+  }
+}

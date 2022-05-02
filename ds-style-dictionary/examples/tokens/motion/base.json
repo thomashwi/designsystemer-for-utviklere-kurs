@@ -1,0 +1,21 @@
+{
+    "motion": {
+      "transition": {
+        "duration": {
+          "short" : {
+            "value": ".2s",
+            "comment": "A quick transition duration"
+          },
+          "medium": {
+            "value": ".4s",
+            "comment": "A medium transition duration"
+          },
+          "long"  : {
+            "value": ".6s",
+            "comment": "A long transition duration"
+          }
+        },
+        "timing-function": { "value": "cubic-bezier(.25, .1, .25, 1)"}
+      }
+    }
+  }

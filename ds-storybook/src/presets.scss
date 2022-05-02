@@ -1,0 +1,35 @@
+@import "_variables.scss";
+
+// Root-stil for knapp
+@mixin button-root() {
+    border-color: $gray-regular;
+    border-radius: 2px;
+    box-shadow: $drop-shadow-heavy;
+    font-family: $font-families-nunito-sans, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+}
+
+// Variant for liten knapp
+@mixin button-preset-small() {
+    @include button-preset-one();
+    font-size: $font-size-0;
+}
+
+// Variant for standard/medium knapp
+@mixin button-preset-regular() {
+    @include button-preset-one();
+    font-size: $font-size-1;
+}
+
+// Variant for stor knapp
+@mixin button-preset-large() {
+    @include button-preset-one();
+    font-size: $font-size-2;
+}
+
+// Variant for stor knapp
+@mixin button-preset-ridiculous() {
+    @include button-preset-one();
+    font-size: $font-size-6;
+}
