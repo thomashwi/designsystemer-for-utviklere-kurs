@@ -2,9 +2,9 @@ name: Install and build monorepo
 
 on:
   push:
-    branches: [ master ]
+    branches: [main]
   pull_request:
-    branches: [ master ]
+    branches: [main]
 
 jobs:
   build:
@@ -13,23 +13,23 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
-    
+
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Install
-      run: |
-        yarn
-    
-    - name: Build design tokens
-      run: |
-        yarn build:tokens
+      - name: Install
+        run: |
+          yarn
 
-    - name: Build storybook
-      run: |
-        yarn build:storybook
+      - name: Build design tokens
+        run: |
+          yarn build:tokens
+
+      - name: Build storybook
+        run: |
+          yarn build:storybook
