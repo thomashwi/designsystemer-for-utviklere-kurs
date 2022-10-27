@@ -1,10 +1,10 @@
-name: Install and build monorepo
+name: Update tokens from Figma
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [16.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -33,3 +33,18 @@ jobs:
       - name: Build storybook
         run: |
           yarn build:storybook
+
+      - name: Check for changes
+        run: git status
+
+      - name: Stage changed files
+        run: git add .
+
+      - name: Commit staged files
+        run: git commit -m "Updating assets from new tokens"
+
+      - name: Fetch from main
+        run: git fetch origin main
+
+      - name: Push code to main
+        run: git push origin HEAD:master
