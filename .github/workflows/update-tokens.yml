@@ -35,7 +35,10 @@ jobs:
           yarn build:storybook
 
       - name: Check for changes
-        run: git status
+      - run: |
+          git config --global user.email "thomas.wiberg@soprasteria.com"
+          git config --global user.name "Thomas Wiberg (workflow)"
+          git status
 
       - name: Stage changed files
         run: git add .
