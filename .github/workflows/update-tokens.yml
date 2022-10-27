@@ -16,38 +16,44 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install
+      - name: Check for token changes
         run: |
-          yarn
+          git diff --name-only HEAD^ HEAD
 
-      - name: Build design tokens
-        run: |
-          yarn build:tokens
+      # - name: Install
+      #   run: |
+      #     yarn
 
-      - name: Build storybook
-        run: |
-          yarn build:storybook
+      # - name: Build design tokens
+      #   run: |
+      #     yarn build:tokens
 
-      - name: Check for changes
-        run: |
-          git config --global user.email "thomas.wiberg@soprasteria.com"
-          git config --global user.name "Thomas Wiberg (workflow)"
-          git status
+      # - name: Build storybook
+      #   run: |
+      #     yarn build:storybook
 
-      - name: Stage changed files
-        run: git add .
+      # - name: Check for changes
+      #   run: |
+      #     git config --global user.email "thomas.wiberg@soprasteria.com"
+      #     git config --global user.name "Thomas Wiberg (workflow)"
+      #     git status
 
-      - name: Commit staged files
-        run: git commit -m "Updating assets from new tokens"
+      # - name: Stage changed files
+      #   run: git add .
 
-      - name: Fetch from main
-        run: git fetch origin main
+      # - name: Commit staged files
+      #   run: git commit -m "Updating assets from new tokens"
 
-      - name: Push code to main
-        run: git push origin HEAD:master
+      # - name: Fetch from main
+      #   run: git fetch origin main
+
+      # - name: Push code to main
+      #   run: git push origin HEAD:master
