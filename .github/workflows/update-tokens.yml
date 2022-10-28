@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Check for token changes
+      - name: Check for token changes sdf
         run: |
           git diff --name-only HEAD^ HEAD
 
